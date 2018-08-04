@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F9F75BF7-A163-45A6-BA38-5EEBC751374C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libxed</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>
+    </CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>
+    </CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>
+    </CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>
+    </CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>XED_AMD_ENABLED;XED_AVX;XED_CET;XED_ENCODER;XED_DECODER;XED_MPX;XED_SUPPORTS_AVX512;XED_SUPPORTS_LZCNT_TZCNT;XED_SUPPORTS_SHA;XED_SUPPORTS_WBNOINVD;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)xed\include\private\;$(ProjectDir)xed\include\public\xed\;$(ProjectDir)xed\generated\;$(ProjectDir)xed\generated\include-private\</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>XED_AMD_ENABLED;XED_AVX;XED_CET;XED_ENCODER;XED_DECODER;XED_MPX;XED_SUPPORTS_AVX512;XED_SUPPORTS_LZCNT_TZCNT;XED_SUPPORTS_SHA;XED_SUPPORTS_WBNOINVD;_M_X64;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)xed\include\private\;$(ProjectDir)xed\include\public\xed\;$(ProjectDir)xed\generated\;$(ProjectDir)xed\generated\include-private\</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>XED_AMD_ENABLED;XED_AVX;XED_CET;XED_ENCODER;XED_DECODER;XED_MPX;XED_SUPPORTS_AVX512;XED_SUPPORTS_LZCNT_TZCNT;XED_SUPPORTS_SHA;XED_SUPPORTS_WBNOINVD;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)xed\include\private\;$(ProjectDir)xed\include\public\xed\;$(ProjectDir)xed\generated\;$(ProjectDir)xed\generated\include-private\</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>XED_AMD_ENABLED;XED_AVX;XED_CET;XED_ENCODER;XED_DECODER;XED_MPX;XED_SUPPORTS_AVX512;XED_SUPPORTS_LZCNT_TZCNT;XED_SUPPORTS_SHA;XED_SUPPORTS_WBNOINVD;_M_X64;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)xed\include\private\;$(ProjectDir)xed\include\public\xed\;$(ProjectDir)xed\generated\;$(ProjectDir)xed\generated\include-private\</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="xed\generated\xed-address-width-enum.c" />
+    <ClCompile Include="xed\generated\xed-attribute-enum.c" />
+    <ClCompile Include="xed\generated\xed-attributes-init.c" />
+    <ClCompile Include="xed\generated\xed-attributes-list.c" />
+    <ClCompile Include="xed\generated\xed-category-enum.c" />
+    <ClCompile Include="xed\generated\xed-chip-enum.c" />
+    <ClCompile Include="xed\generated\xed-chip-features-table.c" />
+    <ClCompile Include="xed\generated\xed-classifiers.c" />
+    <ClCompile Include="xed\generated\xed-convert-table-init.c" />
+    <ClCompile Include="xed\generated\xed-cpuid-bit-enum.c" />
+    <ClCompile Include="xed\generated\xed-cpuid-tables.c" />
+    <ClCompile Include="xed\generated\xed-enc-groups.c" />
+    <ClCompile Include="xed\generated\xed-enc-operand-lu.c" />
+    <ClCompile Include="xed\generated\xed-enc-patterns.c" />
+    <ClCompile Include="xed\generated\xed-encoder-0.c" />
+    <ClCompile Include="xed\generated\xed-encoder-1.c" />
+    <ClCompile Include="xed\generated\xed-encoder-2.c" />
+    <ClCompile Include="xed\generated\xed-encoder-3.c" />
+    <ClCompile Include="xed\generated\xed-encoder-4.c" />
+    <ClCompile Include="xed\generated\xed-encoder-iforms-init.c" />
+    <ClCompile Include="xed\generated\xed-encoder-init.c" />
+    <ClCompile Include="xed\generated\xed-encoder-order-init.c" />
+    <ClCompile Include="xed\generated\xed-encoder-pattern-lu.c" />
+    <ClCompile Include="xed\generated\xed-error-enum.c" />
+    <ClCompile Include="xed\generated\xed-exception-enum.c" />
+    <ClCompile Include="xed\generated\xed-extension-enum.c" />
+    <ClCompile Include="xed\generated\xed-flag-action-enum.c" />
+    <ClCompile Include="xed\generated\xed-flag-enum.c" />
+    <ClCompile Include="xed\generated\xed-flags-actions.c" />
+    <ClCompile Include="xed\generated\xed-flags-complex.c" />
+    <ClCompile Include="xed\generated\xed-flags-simple.c" />
+    <ClCompile Include="xed\generated\xed-iclass-enum.c" />
+    <ClCompile Include="xed\generated\xed-iclass-string.c" />
+    <ClCompile Include="xed\generated\xed-iform-enum.c" />
+    <ClCompile Include="xed\generated\xed-iform-map-init.c" />
+    <ClCompile Include="xed\generated\xed-iform-max.c" />
+    <ClCompile Include="xed\generated\xed-iformfl-enum.c" />
+    <ClCompile Include="xed\generated\xed-ild-disp-l3.c" />
+    <ClCompile Include="xed\generated\xed-ild-easz.c" />
+    <ClCompile Include="xed\generated\xed-ild-eosz.c" />
+    <ClCompile Include="xed\generated\xed-ild-imm-l3.c" />
+    <ClCompile Include="xed\generated\xed-init-inst-table-0.c" />
+    <ClCompile Include="xed\generated\xed-init-inst-table-data.c" />
+    <ClCompile Include="xed\generated\xed-init-inst-table.c" />
+    <ClCompile Include="xed\generated\xed-init-operand-data.c" />
+    <ClCompile Include="xed\generated\xed-init-operand-sequences.c" />
+    <ClCompile Include="xed\generated\xed-init-operand-type-mappings.c" />
+    <ClCompile Include="xed\generated\xed-init-pointer-names.c" />
+    <ClCompile Include="xed\generated\xed-init-reg-class.c" />
+    <ClCompile Include="xed\generated\xed-init-width.c" />
+    <ClCompile Include="xed\generated\xed-isa-set-enum.c" />
+    <ClCompile Include="xed\generated\xed-machine-mode-enum.c" />
+    <ClCompile Include="xed\generated\xed-nonterminal-enum.c" />
+    <ClCompile Include="xed\generated\xed-operand-accessors.c" />
+    <ClCompile Include="xed\generated\xed-operand-action-enum.c" />
+    <ClCompile Include="xed\generated\xed-operand-convert-enum.c" />
+    <ClCompile Include="xed\generated\xed-operand-convert-init.c" />
+    <ClCompile Include="xed\generated\xed-operand-ctype-enum.c" />
+    <ClCompile Include="xed\generated\xed-operand-ctype-map.c" />
+    <ClCompile Include="xed\generated\xed-operand-element-type-enum.c" />
+    <ClCompile Include="xed\generated\xed-operand-element-xtype-enum.c" />
+    <ClCompile Include="xed\generated\xed-operand-enum.c" />
+    <ClCompile Include="xed\generated\xed-operand-type-enum.c" />
+    <ClCompile Include="xed\generated\xed-operand-visibility-enum.c" />
+    <ClCompile Include="xed\generated\xed-operand-width-enum.c" />
+    <ClCompile Include="xed\generated\xed-reg-class-enum.c" />
+    <ClCompile Include="xed\generated\xed-reg-enum.c" />
+    <ClCompile Include="xed\generated\xed-reg-role-enum.c" />
+    <ClCompile Include="xed\generated\xed-rep-map.c" />
+    <ClCompile Include="xed\generated\xed-syntax-enum.c" />
+    <ClCompile Include="xed\generated\xed3-operand-lu.c" />
+    <ClCompile Include="xed\generated\xed3-phash-lu-vv0.c" />
+    <ClCompile Include="xed\generated\xed3-phash-lu-vv1.c" />
+    <ClCompile Include="xed\generated\xed3-phash-lu-vv2.c" />
+    <ClCompile Include="xed\generated\xed3-phash-lu-vv3.c" />
+    <ClCompile Include="xed\src\common\xed-chip-modes-override.c" />
+    <ClCompile Include="xed\src\common\xed-chip-modes.c" />
+    <ClCompile Include="xed\src\common\xed-cpuid.c" />
+    <ClCompile Include="xed\src\common\xed-flags.c" />
+    <ClCompile Include="xed\src\common\xed-immdis.c" />
+    <ClCompile Include="xed\src\common\xed-immed.c" />
+    <ClCompile Include="xed\src\common\xed-init.c" />
+    <ClCompile Include="xed\src\common\xed-isa-set.c" />
+    <ClCompile Include="xed\src\common\xed-operand-action.c" />
+    <ClCompile Include="xed\src\common\xed-operand-values-interface-repl.c" />
+    <ClCompile Include="xed\src\common\xed-operand-values-interface.c" />
+    <ClCompile Include="xed\src\common\xed-portability.c" />
+    <ClCompile Include="xed\src\common\xed-reg-class.c" />
+    <ClCompile Include="xed\src\common\xed-rep-prefix.c" />
+    <ClCompile Include="xed\src\common\xed-state.c" />
+    <ClCompile Include="xed\src\common\xed-table-sizes.c" />
+    <ClCompile Include="xed\src\common\xed-util.c" />
+    <ClCompile Include="xed\src\common\xed-version.c" />
+    <ClCompile Include="xed\src\dec\xed-agen.c" />
+    <ClCompile Include="xed\src\dec\xed-chip-features.c" />
+    <ClCompile Include="xed\src\dec\xed-decode.c" />
+    <ClCompile Include="xed\src\dec\xed-decoded-init.c" />
+    <ClCompile Include="xed\src\dec\xed-decoded-inst.c" />
+    <ClCompile Include="xed\src\dec\xed-disas.c" />
+    <ClCompile Include="xed\src\dec\xed-iform-map.c" />
+    <ClCompile Include="xed\src\dec\xed-ild.c" />
+    <ClCompile Include="xed\src\dec\xed-inst.c" />
+    <ClCompile Include="xed\src\dec\xed3-dynamic-decode.c" />
+    <ClCompile Include="xed\src\dec\xed3-static-decode.c" />
+    <ClCompile Include="xed\src\encdec\xed-enc-dec.c" />
+    <ClCompile Include="xed\src\encdec\xed-patch.c" />
+    <ClCompile Include="xed\src\enc\xed-encode-isa-functions.c" />
+    <ClCompile Include="xed\src\enc\xed-encode.c" />
+    <ClCompile Include="xed\src\enc\xed-encoder-hl.c" />
+    <ClCompile Include="xed\src\ild\xed-ild-support.c" />
+    <ClCompile Include="xed\src\ild\xed-init-ild.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
