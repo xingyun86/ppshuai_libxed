@@ -915,7 +915,7 @@ xed_uint_t xed_encode_nonterminal_PREFIX_ENC_BIND(xed_encoder_request_t* xes)
  */
 xed_uint_t okay=1;
 xed_uint_t conditions_satisfied=0;
-xed_encoder_request_iforms(xes)->x_PREFIX_ENC=0;
+//xed_encoder_request_iforms(xes)->x_PREFIX_ENC=0;//modiry by ppshuai
 conditions_satisfied = (xed3_operand_get_rep(xes) == 2);
 if (conditions_satisfied) {
     okay=1;

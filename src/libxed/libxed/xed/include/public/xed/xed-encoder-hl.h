@@ -382,6 +382,7 @@ typedef union {
     struct {
         xed_uint32_t rep               :1;
         xed_uint32_t repne             :1;
+        xed_uint32_t lock              :1;
         xed_uint32_t br_hint_taken     :1;
         xed_uint32_t br_hint_not_taken :1;
     } s;
@@ -437,6 +438,12 @@ static XED_INLINE  void xed_repne(xed_encoder_instruction_t* x) {
     x->prefixes.s.repne=1;
 }
 
+/// @ingroup ENCHL
+/// To add a LOCK (0xF0) prefix.
+/// @param x The #xed_encoder_instruction_t being filled in.
+static XED_INLINE  void xed_lock(xed_encoder_instruction_t* x) { 
+    x->prefixes.s.lock=1;
+}
 
 
 
